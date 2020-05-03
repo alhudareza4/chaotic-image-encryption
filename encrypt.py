@@ -28,10 +28,10 @@ for x in glob(os.path.join(base_skin_dir, 'images', '*.jpg')):
     image_size = image_matrix.shape
 
     #Substitution Process
-    # substitued_img = con.pixelManipulation(image_matrix, image_size)
-    path = os.path.join('..', 'Source Code', 'images', 'confused')
+    substitued_img = sub.pixelManipulation(image_matrix, image_size)
+    path = os.path.join('..', 'Source Code', 'images', 'substitued')
     newFilePath = path+"\\"+filename.split('.')[0]+".png"
-    #cv2.imwrite(newFilePath, confused_img)
+    cv2.imwrite(newFilePath, substitued_img)
 
 
     #Diffusion Process
