@@ -35,7 +35,7 @@ for x in glob(os.path.join(base_skin_dir, 'images', '*.jpg')):
 
 
     #Diffusion Process
-    diffused_img = dif.pixelManipulation(confused_img, confused_img.shape)
+    diffused_img = dif.pixelManipulation(substitued_img, substitued_img.shape)
     path = os.path.join('..', 'Source Code', 'images', 'encrypted')
     newFilePath = path+"\\"+filename.split('.')[0]+".png"
     cv2.imwrite(newFilePath, diffused_img)
