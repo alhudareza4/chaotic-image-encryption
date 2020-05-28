@@ -6,7 +6,7 @@ def pixelManipulation(image_matrix, image_size):
     [row, col, dim] = image_size
     print("image size:", image_size)
 
-    baker_map = gtm.reconstructBakerMap(image_matrix, image_size)
-    print("Baker Map size:", baker_map.shape)
+    triangular_map = gtm.degenerateTriangularMap(image_matrix, image_size)
+    print("triangular_map size:", triangular_map.shape)
 
-    return baker_map
+    return triangular_map

@@ -58,11 +58,13 @@ def generateTriangularMap(image_matrix, image_size):
     c = 3
     iteration = 10
 
-    if a == -1 and d == -1:
-    a = coprime(width)
-    d = coprime(height)
-
     width, height, dim = image_size
+
+    if a == -1 and d == -1:
+        a = coprime(width)
+        d = coprime(height)
+
+    
     N = image_size[0]
     triangular_map = np.zeros([N,N,3], np.uint8)
 
@@ -96,8 +98,8 @@ def degenerateTriangularMap(image_matrix, image_size):
     encrypted = np.zeros([N,N,3], np.uint8)
 
     if a == -1 and d == -1:
-    a = coprime(width)
-    d = coprime(height)
+        a = coprime(width)
+        d = coprime(height)
 
     ia = imodule(a, width)
     id = imodule(d, height)
